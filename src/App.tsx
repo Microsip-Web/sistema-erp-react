@@ -122,7 +122,7 @@ function App() {
             variant='outlined'
             startIcon={<ArrowBackIcon />}
             onClick={handlePrevious}
-            disabled={activeModule === 0}
+            disabled={activeModule === null || activeModule === 0}
           >
             Anterior
           </Button>
@@ -138,7 +138,7 @@ function App() {
             }}
             endIcon={<ArrowForwardIcon />}
             onClick={handleNext}
-            disabled={activeModule === modules.length - 1}
+            disabled={activeModule === null || activeModule === modules.length - 1}
           >
             Siguiente
           </Button>
