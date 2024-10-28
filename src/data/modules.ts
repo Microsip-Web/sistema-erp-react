@@ -25,7 +25,7 @@ export const modules: Module[] = [
       'Intégralo con el módulo de <a href="/contabilidad" class="text-blue-500 hover:underline">Contabilidad Electrónica</a> y genera automáticamente las pólizas de tus depósitos y retiros.',
       'Consulta y libera los pagos creados por los módulos de <a href="/nomina" class="text-blue-500 hover:underline">Nómina</a> y <a href="/cuentas-por-pagar" class="text-blue-500 hover:underline">Cuentas por Pagar</a>.'
     ],
-    pdfLink: 'path/to/module1.pdf',
+    pdfLink: 'https://cdn.prod.website-files.com/627983ccef617d453b9485ad/66881510ecf479711e420755_ficha_tecnica_Bancos.pdf',
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ export const modules: Module[] = [
       'Conoce la salud financiera de tu empresa con estados contables personalizables.',
       'Registra un número ilimitado de empresas.'
     ],
-    pdfLink: 'path/to/module2.pdf',
+    pdfLink: 'https://cdn.prod.website-files.com/627983ccef617d453b9485ad/66881513019ee96ab53917db_ficha_tecnica_Contabilidad_Electronica.pdf',
   },
   {
     id: 3,
@@ -48,8 +48,15 @@ export const modules: Module[] = [
     brief: 'Genera la nómina <b>fácilmente</b>, sin errores y cumpliendo con tus obligaciones fiscales',
     category: 'Administra',
     image: 'https://cdn.prod.website-files.com/627983ccef617d453b9485ad/671bdc40052fc708e26dc8b8_Nomina.png',
-    benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3'],
-    pdfLink: 'path/to/module3.pdf',
+    benefits: [
+      'Timbra y cancela recibos de nómina versión 4.0.',
+      'Calcula con precisión todas tus obligaciones fiscales de nómina.',
+      'Personaliza el proceso de nómina en base a frecuencias de pagos, tipo de salario, contratos y más.',
+      'Permite a tus empleados consultar sus recibos de nómina y solicitar vacaciones desde una aplicación móvil.',
+      'Aplica automáticamente las incidencias en registros de entradas y salidas en los recibos de nómina generados.',
+      'Valida los datos fiscales de tus empleados en el SAT.',
+    ],
+    pdfLink: 'https://cdn.prod.website-files.com/627983ccef617d453b9485ad/669733da470a4544cbd5667e_ficha_tecnica_Nomina_VF.pdf',
   },
   {
     id: 4,

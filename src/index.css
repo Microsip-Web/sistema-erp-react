@@ -5,5 +5,9 @@ body {
 }
 
 .sistema-erp-react-mui {
-  background-color: #e0e0e0;
+  .benefits-and-links {
+    a {
+      color: #ff8623;
+    }
+  }
 }
