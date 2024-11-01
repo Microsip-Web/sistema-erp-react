@@ -5,6 +5,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { modules } from './data/modules';
 import Tooltip from '@mui/material/Tooltip';
+import { emptyModule } from './data/emptyModule';
 // import { theme } from './theme/theme';
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
     if (index === null) {
       window.history.pushState({}, '', window.location.pathname);
     } else {
-      const moduleName = modules[index].name.toLowerCase().replace(/\s+/g, '-');
+      const moduleName = modules[index].url.toLowerCase().replace(/\s+/g, '-');
       window.history.pushState(
         {},
         '',
@@ -63,11 +64,13 @@ function App() {
     }
   };
 
+  
+
   return (
-    <Container maxWidth="lg" sx={{ py: 4,}}>
+    <Container disableGutters maxWidth="lg" sx={{ py: 4}}>
 
       {/* Modules list of buttons */}
-      <Paper variant='outlined' sx={{ 
+      <Paper elevation={0} sx={{ 
         p: { xs: 2, sm: 4 },
         mb: { xs: 2, sm: 4 },
       }}>
@@ -96,7 +99,7 @@ function App() {
                     bgcolor: (theme) => theme.palette.primary.main,
                     color: (theme) => theme.palette.secondary.contrastText,
                     borderRadius: '12px',
-                    fontSize: { xs: '0.8rem', sm: '1rem', md: '1.2rem' }
+                    fontSize: { xs: '0.6rem', sm: '0.8rem', md: '1rem' }
                   }
                 },
                 arrow: {
@@ -109,7 +112,7 @@ function App() {
               <Button
                 onClick={() => {
                   setActiveModule(index);
-                  updateURL(index);
+                  updateURL(index)
                 }}
                 sx={{
                   p: 0,
@@ -126,27 +129,6 @@ function App() {
                 />
               </Button>
             </Tooltip>
-            // <Button
-            //   key={module.id}
-            //   // onClick={() => setActiveModule(index)}
-            //   onClick={() => {
-            //     setActiveModule(index);
-            //     updateURL(index);
-            //   }}
-            //   sx={{
-            //     p: 0,
-            //     height: '60px',
-            //     width: '50px',
-            //     border: activeModule === index ? 'none' : '1px solid #e0e0e0',
-            //     bgcolor: activeModule === index ? (theme) => theme.palette.secondary.main : 'transparent',
-            //   }}
-            // >
-            //   <img
-            //     src={module.image}
-            //     alt={module.name}
-            //     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-            //   />
-            // </Button>
           ))}
         </Box>
 
@@ -179,20 +161,85 @@ function App() {
         </Box>
 
         {activeModule === null ? (
-          <Box
-            sx={{
-              textAlign: 'center',
-              p: 4,
-              border: '1px dashed #ccc',
-              borderRadius: 2,
-            }}
-          >
-            <Typography variant='h6' color="text.secondary" sx={{
-              fontSize: { xs: '1rem', sm: '1.25rem' }
-            }}>
-              Selecciona un módulo para ver sus detalles
-            </Typography>
-          </Box>
+          <Grid container spacing={2} sx={{
+            minHeight: { xs: 'auto', md: '50vh' },
+          }}>
+            {/* Left side */}
+            <Grid size={{ xs: 12, md: 6 }}>
+              <Box sx={{
+                mb: { xs: 0, md: 0 },
+                display: 'flex',
+                flexDirection: { xs: 'row', md: 'row', lg: 'column' },
+                alignItems: { xs: 'center', md: 'center', lg: 'flex-start' },
+                // justifyContent: { xs: 'center', md: 'center', lg: 'flex-start' },
+                gap: { xs: 2, md: 2, lg: 0 },
+              }}>
+                
+                <Box>
+                  <Typography variant="h4" gutterBottom fontWeight="bold" sx={{
+                    fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' }
+                  }}>
+                    Llega tan lejos como tú quieras con el sistema ERP Microsip
+                  </Typography>
+                  <Typography color='text.secondary' variant="caption" gutterBottom sx={{
+                    fontSize: { xs: '0.8rem', sm: '1rem', md: '1.2rem' }
+                  }}>
+                    Selecciona un módulo para ver más información
+                  </Typography>
+                </Box>
+              </Box>
+            </Grid>
+
+            {/* Right side */}
+            <Grid size={{ xs: 12, md: 6 }}>
+              <Box>
+                <Paper variant='outlined' sx={{ p: 4, bgcolor: '#e5e5e5' }}
+                >
+                  <Typography
+                    dangerouslySetInnerHTML={{ __html: emptyModule.brief }}
+                    variant="h5" gutterBottom
+                    sx={{
+                      mb: 4,
+                      fontSize: { xs: '0.8rem', sm: '1rem', md: '1.2rem' }
+                    }}
+                  />
+
+                  {emptyModule.benefits.map((benefit, index) => (
+                    <Box
+                      className='benefits-and-links'
+                      key={index}
+                      sx={{ display: 'flex', gap: 2, mb: 3, alignItems: 'flex-start' }}
+                    >
+                      <Box
+                        sx={{
+                          bgcolor: (theme) => theme.palette.secondary.main,
+                          color: (theme) => theme.palette.secondary.contrastText,
+                          width: 32,
+                          height: 32,
+                          borderRadius: 1,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          flexShrink: 0,
+                        }}
+                      >
+                        {index + 1}
+                      </Box>
+                      <Typography
+                        dangerouslySetInnerHTML={{ __html: benefit }}
+                        sx={{
+                          flex: 1,
+                          fontSize: { xs: '0.6rem', sm: '0.8rem', md: '1rem' },
+                          lineHeight: { xs: 1, sm: 1.2, md: 1.4 }
+                        }}
+                      />
+                    </Box>
+                  ))}
+                </Paper>
+
+              </Box>
+            </Grid>
+          </Grid>  
         ) : (
           <>
             {/* Top section */}
@@ -248,14 +295,14 @@ function App() {
               {/* Right side */}
               <Grid size={{ xs: 12, md: 6 }}>
                 <Box>
-                  <Paper variant='outlined' sx={{ p: 4, }}
+                  <Paper variant='outlined' sx={{ p: 4, bgcolor: '#e5e5e5' }}
                   >
                     <Typography
                       dangerouslySetInnerHTML={{ __html: modules[activeModule].brief }}
                       variant="h5" gutterBottom
                       sx={{
                         mb: 4,
-                        fontSize: { xs: '1.1rem', sm: '1.3rem', md: '1.5rem' }
+                        fontSize: { xs: '0.8rem', sm: '1rem', md: '1.2rem' }
                       }}
                     />
 
@@ -284,8 +331,8 @@ function App() {
                           dangerouslySetInnerHTML={{ __html: benefit }}
                           sx={{
                             flex: 1,
-                            fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem' },
-                            lineHeight: { xs: 1.4, sm: 1.5, md: 1.6 }
+                            fontSize: { xs: '0.6rem', sm: '0.8rem', md: '1rem' },
+                            lineHeight: { xs: 1, sm: 1.2, md: 1.4 }
                           }}
                         />
                       </Box>
