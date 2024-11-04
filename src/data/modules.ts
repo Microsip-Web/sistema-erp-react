@@ -25,7 +25,7 @@ export const modules: Module[] = [
     benefits: [
       'Visualiza el historial de tus cuentas bancarias con todos sus movimientos.',
       'Intégralo con el módulo de Contabilidad Electrónica y genera automáticamente las pólizas de tus depósitos y retiros.',
-      'Consulta y libera los pagos creados por los módulos de Nómina y Cuentas por Pagar'
+      'Consulta y libera los pagos creados por los módulos de <a href="/nomina">Nómina</a> y <a href="/cuentas-por-pagar">Cuentas por Pagar</a>'
     ],
     pdfLink: 'https://cdn.prod.website-files.com/627983ccef617d453b9485ad/66881510ecf479711e420755_ficha_tecnica_Bancos.pdf',
   },
@@ -226,7 +226,7 @@ export const modules: Module[] = [
   {
     id: 14,
     url: '/administrador-de-sucursales',
-    name: 'Administración de Sucursales',
+    name: 'Administrador de Sucursales',
     brief: 'Organiza tu empresa con un <b>manejo</b> adecuado de sucursales.',
     category: 'Sincroniza',
     image: 'https://cdn.prod.website-files.com/627983ccef617d453b9485ad/671bdc3ef0f36272a072746e_ADS.png',
