@@ -25,7 +25,7 @@ export const modules: Module[] = [
     benefits: [
       'Visualiza el historial de tus cuentas bancarias con todos sus movimientos.',
       'Intégralo con el módulo de Contabilidad Electrónica y genera automáticamente las pólizas de tus depósitos y retiros.',
-      'Consulta y libera los pagos creados por los módulos de <a href="/nomina">Nómina</a> y <a href="/cuentas-por-pagar">Cuentas por Pagar</a>'
+      'Consulta y libera los pagos creados por los módulos de <a href="/testing/sistema-erp/nomina">Nómina</a> y <a href="/testing/sistema-erp/cuentas-por-pagar">Cuentas por Pagar</a>'
     ],
     pdfLink: 'https://cdn.prod.website-files.com/627983ccef617d453b9485ad/66881510ecf479711e420755_ficha_tecnica_Bancos.pdf',
   },
@@ -88,7 +88,7 @@ export const modules: Module[] = [
       'Domina las fechas de cada pago, sus montos y gestiona las condiciones específicas de tus proveedores.',
       'Válida ante el SAT los datos fiscales de tus proveedores y sus CFDIs emitidos, almacénalos y genera comprobantes de recepción de pago.',
       'Registra cualquier concepto de cargo o crédito particular de tu empresa, además de los tradicionales.',
-      'Integra los pagos a proveedores directamente al módulo de Bancos.',
+      'Integra los pagos a proveedores directamente al módulo de <a href="/testing/sistema-erp/bancos">Bancos</a>.',
       'Emite constancias de retenciones en la versión 2.0 de forma sencilla.'
     ],
     pdfLink: 'https://cdn.prod.website-files.com/627983ccef617d453b9485ad/668815121a051ce08e2c5df9_ficha_tecnica_Cuentas_por_Pagar.pdf',
@@ -105,7 +105,7 @@ export const modules: Module[] = [
       'Amplía el margen de utilidad creando planes de compras inteligentes con sugerencias basadas en tus criterios.',
       'Organiza tu catálogo de proveedores, especifica sus políticas y valida sus datos fiscales y CFDIs recibidos ante el SAT.',
       'Adicional a los impuestos y retenciones más comunes, registra cualquier gravamen no contemplado.',
-      'Integra el Administrador de Sucursales y gestiona tus compras por sucursal.'
+      'Integra el <a href="/testing/sistema-erp/administrador-de-sucursales">Administrador de Sucursales</a> y gestiona tus compras por sucursal.'
     ],
     pdfLink: 'https://cdn.prod.website-files.com/627983ccef617d453b9485ad/6688151067e38d85fe0fb7a2_ficha_tecnica_Compras.pdf',
   },
@@ -119,9 +119,9 @@ export const modules: Module[] = [
     benefits: [
       'Evita mermas y robos monitoreando el historial de entradas, salidas y movimientos de la mercancía entre almacenes.',
       'Maneja cualquier mercancía; define las unidades de medidas, clasifícala, agrúpala y regístrala según el tipo de artículo.',
-      'Actualiza automáticamente las entradas por compras y salidas por ventas, integrando los módulos de Compras, Punto de Venta y Ventas.',
+      'Actualiza automáticamente las entradas por compras y salidas por ventas, integrando los módulos de <a href="/testing/sistema-erp/compras">Compras</a>, <a href="/testing/sistema-erp/punto-de-venta">Punto de Venta</a> y <a href="/testing/sistema-erp/ventas">Ventas</a>.',
       'Optimiza los niveles de inventario calculándolos automáticamente.',
-      'Integra el Administrador de Sucursales, mueve mercancía entre almacenes y sucursales, y rastrea cada movimiento registrado por el personal involucrado.',
+      'Integra el <a href="/testing/sistema-erp/administrador-de-sucursales">Administrador de Sucursales</a>, mueve mercancía entre almacenes y sucursales, y rastrea cada movimiento registrado por el personal involucrado.',
       '¡Cumple al 100% con SAT! Emite el CFDI de traslado en la versión 4.0.'
     ],
     pdfLink: 'https://cdn.prod.website-files.com/627983ccef617d453b9485ad/66881513d0263e7571cb4b45_ficha_tecnica_Inventarios.pdf',
@@ -154,7 +154,7 @@ export const modules: Module[] = [
     benefits: [
       'Integra tu solución Microsip con los líderes del comercio electrónico; Shopify y Mercado Libre.',
       'Gestiona en un solo sistema administrativo la operación tu de empresa y tienda electrónica.',
-      'Descuenta automáticamente en tu módulo de Inventarios todos los artículos vendidos en tu tienda electrónica.',
+      'Descuenta automáticamente en tu módulo de <a href="/testing/sistema-erp/inventarios">Inventarios</a> todos los artículos vendidos en tu tienda electrónica.',
       'Sincroniza tus artículos, con sus precios y existencias en tu tienda electrónica.'
     ],
     pdfLink: 'https://cdn.prod.website-files.com/627983ccef617d453b9485ad/668815152ab99fa5fb35edaf_ficha_tecnica_Sync-e.pdf',
@@ -171,7 +171,7 @@ export const modules: Module[] = [
       'Registra todo el ciclo de ventas, desde la cotización hasta la entrega.',
       'Conoce los artículos más vendidos y los márgenes de utilidad de cada uno.',
       'Obtén automáticamente las comisiones de tus vendedores y definiendo sus porcentajes, montos y criterios.',
-      'Aplica anticipos fiscales al integrarlo con el módulo de Cuentas por Cobrar',
+      'Aplica anticipos fiscales al integrarlo con el módulo de <a href="/testing/sistema-erp/cuentas-por-cobrar">Cuentas por Cobrar</a>',
       'Valida ante el SAT los datos fiscales de tus clientes de forma rápida y confiable.'
     ],
     pdfLink: 'https://cdn.prod.website-files.com/627983ccef617d453b9485ad/668815156f5292cdfe12d59e_ficha_tecnica_Ventas.pdf',

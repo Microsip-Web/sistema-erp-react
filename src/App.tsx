@@ -129,10 +129,7 @@ function App() {
 
         {/* Routes */}
         <Routes>
-          <Route path="/" element={
-            // Your existing home page content
-            <HomeContent />
-          } />
+          <Route path="/" element={<HomeContent />} />
           <Route path=":moduleUrl" element={<ModulePage />} />
         </Routes>
       </Paper>    

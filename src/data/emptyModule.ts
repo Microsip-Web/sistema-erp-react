@@ -1,6 +1,6 @@
 export const emptyModule = {
   id: 1,
-  url: '/',
+  url: '/testing/sistema-erp/',
   name: 'Llega tan lejos como tú quieras con el sistema ERP Microsip',
   brief: 'Llega tan lejos como tú quieras.',
   benefits: [
