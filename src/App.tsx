@@ -8,6 +8,7 @@ import Tooltip from '@mui/material/Tooltip';
 import { emptyModule } from './data/emptyModule';
 // import { theme } from './theme/theme';
 import { ModulePage } from './components/ModulePage';
+import { BenefitsList } from './components/BenefitsList';
 
 function App() {
   const navigate = useNavigate();
@@ -196,38 +197,7 @@ function HomeContent() {
                 }}
               />
 
-              {emptyModule.benefits.map((benefit, index) => (
-                <Box
-                  className='benefits-and-links'
-                  key={index}
-                  sx={{ display: 'flex', gap: 2, mb: 3, alignItems: 'flex-start' }}
-                >
-                  <Box
-                    sx={{
-                      bgcolor: (theme) => theme.palette.secondary.main,
-                      color: (theme) => theme.palette.secondary.contrastText,
-                      width: 32,
-                      height: 32,
-                      borderRadius: 1,
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      flexShrink: 0,
-                    }}
-                  >
-                    {index + 1}
-                  </Box>
-                  <Typography
-                    dangerouslySetInnerHTML={{ __html: benefit }}
-                    sx={{
-                      flex: 1,
-                      fontSize: { xs: '0.875rem', sm: '1rem', md: '1.125rem' },
-                      lineHeight: 1.6,
-                      letterSpacing: '0.01em'
-                    }}
-                  />
-                </Box>
-              ))}
+              <BenefitsList benefits={emptyModule.benefits} />
             </Paper>
           </Box>
         </Grid>
