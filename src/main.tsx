@@ -14,9 +14,9 @@ createRoot(document.getElementById('root')!).render(
     <ThemeProvider theme={theme}>
       {/* basename is used to avoid the issue of the app not being found when the url is not the root
       testing is /testing/sistema-erp
-      production is /sistema-erp
+      production is /sistema-erp-microsip
       */}
-      <BrowserRouter basename="/sistema-erp">
+      <BrowserRouter basename="/sistema-erp-microsip">
         <div className="sistema-erp-react-mui">
           <App />
         </div>
