@@ -16,7 +16,7 @@ createRoot(document.getElementById('root')!).render(
       testing is /testing/sistema-erp
       production is /sistema-erp
       */}
-      <BrowserRouter basename="/testing/sistema-erp">
+      <BrowserRouter basename="/sistema-erp">
         <div className="sistema-erp-react-mui">
           <App />
         </div>
