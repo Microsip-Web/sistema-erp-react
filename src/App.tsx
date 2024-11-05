@@ -38,12 +38,14 @@ function App() {
   };
 
   return (
-    <Container disableGutters maxWidth="lg" sx={{ py: 4}}>
+    // remove padding from the container to avoid conflicts with webflow parent container
+    <Container disableGutters maxWidth="lg" sx={{ py: 0}}>
 
       {/* Modules list of buttons */}
       <Paper elevation={0} sx={{ 
-        p: { xs: 2, sm: 4 },
-        mb: { xs: 2, sm: 4 },
+        // remove padding from the paper to avoid conflicts with webflow parent container
+        p: { xs: 0, sm: 0 },
+        mb: { xs: 2, sm: 0 },
       }}>
         <Box
           sx={{ 
@@ -103,10 +105,10 @@ function App() {
         {/* next buttons */}
         <Box sx={{ 
           display: 'flex',
-          justifyContent: 'space-between',
-          mb: 8,
+          justifyContent: 'center',
+          mb: 4,
           flexDirection: { xs: 'row'},
-          gap: { xs: 2, sm: 0 }
+          gap: { xs: 2 }
          }}>
           <Button
             variant='outlined'
@@ -185,7 +187,7 @@ function HomeContent() {
         {/* Right side */}
         <Grid size={{ xs: 12, md: 6 }}>
           <Box>
-            <Paper variant='outlined' sx={{ p: 4, bgcolor: '#e5e5e5' }}
+            <Paper elevation={0} sx={{ p: 4, bgcolor: '#e5e5e5' }}
             >
               <Typography
                 dangerouslySetInnerHTML={{ __html: emptyModule.brief }}

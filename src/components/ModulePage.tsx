@@ -78,7 +78,7 @@ export function ModulePage() {
         {/* Right side */}
         <Grid size={{ xs: 12, md: 6 }}>
           <Box>
-            <Paper variant='outlined' sx={{ p: 4, bgcolor: '#e5e5e5' }}>
+            <Paper elevation={0} sx={{ p: 4, bgcolor: '#e5e5e5' }}>
               <Typography
                 dangerouslySetInnerHTML={{ __html: module.brief }}
                 sx={{
